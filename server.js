@@ -2,9 +2,9 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-app.use(express.json()); // Middleware para leer JSON en las solicitudes
+app.use(express.json());
 
-// 📌 Endpoint POST /alumno
+// Endpoint alumno
 app.post("/alumno", (req, res) => {
     const { cuenta, nombre, promedio, grado, grupo } = req.body;
 
@@ -24,7 +24,7 @@ app.post("/alumno", (req, res) => {
     });
 });
 
-// 📌 Iniciar servidor en puerto 3000
+
 app.listen(3000, () => {
-    console.log("Servidor API corriendo en http://localhost:3000");
+    console.log("API corriendo en http://localhost:3000");
 });
